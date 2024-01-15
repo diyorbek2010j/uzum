@@ -1,0 +1,25 @@
+.EmpotryW{
+    height: 700px;
+}
+.EmpotryW img{
+    width: 200px;
+    margin-left: 510px;
+}
+.EmpotryW h2{
+text-align: center;
+margin-top: 15px;
+}
+.EmpotryW p{
+    text-align: center;
+    margin-top: 20px;
+}
+.EmpotryW button{
+    padding: 1.5% 3%;
+    margin-left: 520px;
+    margin-top: 30px;
+    border: none;
+    background: var(--bg-py);
+    color: #fff;
+    border-radius: 8px;
+    font-size: 15px;
+}

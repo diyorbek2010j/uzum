@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import NavbarContiner from './components/navbar/NavbarContiner';
+import { Routes, Route } from 'react-router-dom';
+import Home from './router/home/Home';
+import Login from './router/login/Login';
+import Wishis from './router/wishis/Wishis';
+import Cart from './router/cart/Cart';
+import { PRODUCTS } from './static/Index';
+import FooterContiner from './components/footer/FooterContiner';
+import Singlerote from './router/singleroute/Singlerote';
+import Notfound from './router/Notfound/Notfound';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavbarContiner/>
+<Routes>
+<Route path='/' element={<Home data={PRODUCTS}/>}/>
+<Route path='/login' element={<Login/>}/>
+<Route path='/wishis' element={<Wishis/>}/>
+< Route path='/cart' element={<Cart/>}/>
+< Route path='/products/:id' element={<Singlerote/>}/>
+< Route path='/*' element={<Notfound/>}/>
+
+</Routes>
+{/* <FooterContiner/> */}
     </div>
   );
 }

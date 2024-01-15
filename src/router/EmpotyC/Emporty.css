@@ -1,0 +1,25 @@
+.EmpotryC{
+    height: 700px;
+}
+.EmpotryC img{
+    width: 200px;
+    margin-left: 510px;
+}
+.EmpotryC h2{
+text-align: center;
+margin-top: 15px;
+}
+.EmpotryC p{
+    text-align: center;
+    margin-top: 20px;
+}
+.EmpotryC button{
+    padding: 1.5% 3%;
+    margin-left: 520px;
+    margin-top: 30px;
+    border: none;
+    background: var(--bg-py);
+    color: #fff;
+    border-radius: 8px;
+    font-size: 15px;
+}
