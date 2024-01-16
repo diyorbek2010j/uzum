@@ -9,6 +9,7 @@
 .products__card{
     width: 237px;
     position: relative;
+    overflow: hidden;
 }
 .products__image{
     width: 100%;

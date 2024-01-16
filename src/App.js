@@ -23,7 +23,7 @@ function App() {
 < Route path='/*' element={<Notfound/>}/>
 
 </Routes>
-{/* <FooterContiner/> */}
+<FooterContiner/>
     </div>
   );
 }
