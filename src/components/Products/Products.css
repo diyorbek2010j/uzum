@@ -56,6 +56,9 @@
     top: 10px;
     right: 10px;
     font-size: 22px;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
 }
 .product__cart{
     position: absolute;
@@ -69,19 +72,34 @@
     display: grid;
     place-items: center;
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width:550px) {
     .product__wrapper{
         gap: 8px;
     }
-    .products__card{
-        width: calc(50% -4px);
+    .product__card{
+        width: calc(50% - 4px);
     }
-    .products__image{
+    .product__image{
         height: 270px;
     }
 }
-@media screen and (max-width: 400px) {
-    .products__image{
-        height: 220px;
+@media screen and (max-width:400px) {
+    .product__image{
+        height: 180px;
     }
+    .product__heart{
+        font-size: 17px;
+    }
+    .product__cart{
+        font-size: 17px;
+        width: 30px;
+        height: 30px;
+    }
+    .product__wrapper{
+        margin: 2% 0 6% 0;
+    }
+    .products h2{
+        font-size: 22px;
+    }
+
 }

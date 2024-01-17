@@ -1,11 +1,14 @@
 import React from 'react'
 import "./Products.css"
-import { IoHeartOutline, IoCartOutline } from "react-icons/io5";
+import { IoHeartOutline, IoHeart, IoCartOutline } from "react-icons/io5";
 import  {Link} from "react-router-dom"
-import { addToWishes } from '../../context/wishesSlice';
-import {  useDispatch } from 'react-redux';
+import { addToWishes, removeFromWishes } from '../../context/wishesSlice';
+import {  useDispatch, useSelector } from 'react-redux';
+
 function Products({title, data}) {
  const dispatch = useDispatch()
+ const wishes = useSelector((s)=> s.wishes.value)
+ console.log(wishes);
   return (
     <div className='container'>
         <div className="products">
@@ -26,9 +29,19 @@ function Products({title, data}) {
         <br />
         <del className='product__old-price'>1500 so'm</del>
         <b className='product__price'>{el.price?.brm()} so'm</b>
-        <div onClick={()=> dispatch(addToWishes(el))} className="product__heart">
-          <IoHeartOutline/>
+          {wishes?.some((liked) => liked.id === el.id) ? (
+  
+  <div 
+  onClick={()=> dispatch(removeFromWishes(el))} className="product__heart">
+          <IoHeart/>
         </div>
+          ) : (
+            <div onClick={()=> dispatch(addToWishes(el))} className="product__heart">
+            <IoHeartOutline/>
+          </div>
+          )
+
+          }
         <div className="product__cart">
           <IoCartOutline/>
         </div>
@@ -42,4 +55,4 @@ function Products({title, data}) {
   )
 }
 
-export default Products
+export default Products 
