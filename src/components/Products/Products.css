@@ -78,6 +78,7 @@
     }
     .product__card{
         width: calc(50% - 4px);
+        
     }
     .product__image{
         height: 270px;

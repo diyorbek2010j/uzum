@@ -143,15 +143,19 @@ padding-right: 90px;
 @media screen and (max-width: 500px){
     .footer{
         width: 350px;
-        border: 1px solid red;
         height: 25%;
     }
 
     .footer__card{
         width: 200px;
+       text-align: center;
     }
     .footer__bottom{
         margin-top: 50px;
+    }
+    .footer__icon{
+        display: block;
+        margin: auto;
     }
  
 }
