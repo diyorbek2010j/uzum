@@ -79,7 +79,9 @@ padding-left: 10px;
 }
 @media screen and (max-width: 500px){
     .logn__card{
-        margin-left: 20px;
+        display: block;
+        margin: auto;
+        margin-top: 50px;
         width: 300px;
     }
     .login__card-input input{

@@ -128,7 +128,7 @@ padding-right: 90px;
 
 }
 .footer__card p:nth-child(3){
-    display: none;
+        display: none;
 
 }
 
@@ -142,11 +142,16 @@ padding-right: 90px;
 }
 @media screen and (max-width: 500px){
     .footer{
-        width: 270px;
+        width: 350px;
+        border: 1px solid red;
+        height: 25%;
     }
 
     .footer__card{
         width: 200px;
+    }
+    .footer__bottom{
+        margin-top: 50px;
     }
  
 }
