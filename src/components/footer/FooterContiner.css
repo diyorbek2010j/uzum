@@ -140,3 +140,13 @@ padding-right: 90px;
     }
 
 }
+@media screen and (max-width: 500px){
+    .footer{
+        width: 270px;
+    }
+
+    .footer__card{
+        width: 200px;
+    }
+ 
+}
