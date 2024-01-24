@@ -7,8 +7,15 @@ function Wishis() {
   console.log(wishes);
   return (
     <div>
-      <Products data={wishes} title={"Sevimlilar"} />
-      <EmpotyW/>
+      <Products data={wishes}  />
+      
+            
+              
+{
+  wishes.length ? <Products data={wishes}/> : <EmpotyW/>
+}
+            
+      
     </div>
   )
 }

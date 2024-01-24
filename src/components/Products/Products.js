@@ -4,14 +4,20 @@ import { IoHeartOutline, IoHeart, IoCartOutline } from "react-icons/io5";
 import  {Link} from "react-router-dom"
 import { addToWishes, removeFromWishes } from '../../context/wishesSlice';
 import {  useDispatch, useSelector } from 'react-redux';
+import { incCart } from '../../context/cartSlice';
+import {toast} from "react-toastify"
+
 
 function Products({title, data}) {
  const dispatch = useDispatch()
  const wishes = useSelector((s)=> s.wishes.value)
- console.log(wishes);
+const handleAddCart = (el)=>{
+  dispatch(incCart(el))
+  toast.success("Savatga qo'shildi")
+}
   return (
     <div className='container'>
-        <div className="products">
+        <div className="products">  
         <h2>{title}</h2>
         <div className="products__wrapper">
 
@@ -24,10 +30,10 @@ function Products({title, data}) {
 </Link>
         </div>
         <p className='products__title'>{el.title}</p>
-        <mark className='product__monthly'>1500 so'm/oyiga</mark>
+        <mark className='product__monthly'>{(el.price * 1.5 / 12)?.brm()} so'm</mark>
         <br />
         <br />
-        <del className='product__old-price'>1500 so'm</del>
+        <del className='product__old-price'>{(el.price * 1.2)?.brm()} so'm</del>
         <b className='product__price'>{el.price?.brm()} so'm</b>
           {wishes?.some((liked) => liked.id === el.id) ? (
   
@@ -42,7 +48,7 @@ function Products({title, data}) {
           )
 
           }
-        <div className="product__cart">
+        <div onClick={()=> handleAddCart(el)} className="product__cart">
           <IoCartOutline/>
         </div>
     </div>

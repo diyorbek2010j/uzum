@@ -1,0 +1,127 @@
+/* .cart__wrapper{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.cart__img{
+    width: 60%;
+    height: 100%;
+}
+.cart__item{
+    width: 100%;
+    height: 250px;
+    justify-content: space-between;
+    border: 1px solid #888;
+    margin-top: 50px;
+    border-radius: 8px;
+}
+.cart__total{
+    display: flex;
+
+}
+.cart__total img{
+    width: 100px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.cart__total p{
+    margin-top: 40px;
+    padding-left: 20px;
+    font-size: 18px;
+}
+.cart__total p:nth-child(3){
+    color: #888;
+}
+.cart__btn{
+    width: 150px;
+    height: 50px;
+    border: 1px solid #888;
+    margin-left: 200px;
+    border-radius: 8px;
+    display: flex;
+}
+.cart__btn span{
+    margin-top: 18px;
+}
+.cart__btn button{
+    padding: 3% 20%;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    margin-top: 5px;
+}
+.cart__title{
+    margin-left: 250px;
+    width: 200px;
+    height: 70px;
+    white-space: nowrap;
+
+}
+.cart__login{
+    width: 100%;
+    height: 310px;
+    display: block;
+    margin: auto;
+}
+.cart__card{
+    width: 400px;
+    height: 300px;
+    margin-top: 40px;
+    margin-left: 50px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    
+}
+.cart__card h3{
+margin-top: 15px;
+padding-left: 30px;
+}
+.cart__user{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+    margin-top: 30px;
+}
+.cart__card input{
+   width: 350px;
+   display: block;
+   margin: auto;
+   margin-top: 10px;
+   height: 30px;
+   padding-left: 80px;
+   border: 2px solid var(--bg-py) ;
+   border-radius: 5px;
+   color: var(--bg-py);
+}
+.cart-btn{
+    width: 300px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 45px;
+    color: #fff;
+    background: var(--bg-py);
+    border: none;
+    border-radius: 8px;
+}
+.cart__location{
+    width: 400px;
+    height: 130px;
+    background: #eee;
+ margin-left: 50px;
+    border-radius: 10px;
+}
+.cart__block{
+    display: block;
+}
+.cart__block h3{
+    font-size: 15px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.cart__location p{
+    font-size: 14px;
+    margin-top: 5px;
+    padding-left: 20px;
+} */

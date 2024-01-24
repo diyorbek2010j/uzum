@@ -10,6 +10,11 @@ import { PRODUCTS } from './static/Index';
 import FooterContiner from './components/footer/FooterContiner';
 import Singlerote from './router/singleroute/Singlerote';
 import Notfound from './router/Notfound/Notfound';
+
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
+
+
 function App() {
   return (
     <div className="App">
@@ -24,6 +29,7 @@ function App() {
 
 </Routes>
 <FooterContiner/>
+<ToastContainer/>
     </div>
   );
 }
