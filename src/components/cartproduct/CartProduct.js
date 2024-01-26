@@ -1,12 +1,13 @@
 import React, {useState} from 'react'
 import "./CartProduct.css"
 import {FaRegTrashAlt} from 'react-icons/fa'
-import { deCart,incCart,removeCart } from '../../context/cartSlice'
+import { deCart,incCart,removeAllCart,removeCart } from '../../context/cartSlice'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 const BOT__TOKEN = "6649486877:AAFIxu1CvrXexdOzygG50rEzaw__rJlTplQ"
-const USER_ID =   6516090274
+const USER_ID =    6516090274
 const CHAT_ID =  -1002109312367
 
 
@@ -17,22 +18,38 @@ const CHAT_ID =  -1002109312367
 function CartProducts({data}) {
   const dispatch = useDispatch()
   const [name, setName] = useState("")
-  const [phoneNumber, setPhoneNumber] = useState("")
+  const [phoneNumber, setPhoneNumber] = useState("") 
   const [address, setAddress] = useState("")
   const [message, setMessage] = useState("")
   
   const handleSubmit = (e)=> {
     e.preventDefault()
-    let text = "Buyurtma "
-    text += `ismi: ${name} `
-    text += `tel: ${phoneNumber} `
-    text += `manzil: ${address} `
-    text += `habar: ${message} `
+    let text = "Buyurtma  %0A"
+    text += `ismi: ${name} %0A `
+    text += `tel: ${phoneNumber} %0A`
+    text += `manzil: ${address}  %0A`
+    text += `habar: ${message} %0A %0A `
 
-let url = `https://api.telegram.org/bot${BOT__TOKEN}/sendMessage?chat_id${CHAT_ID}&text=${text}`
-let api = new XMLHttpRequest()
-api.open("GET", url, true)
-api.send()
+data.forEach((item)=>{
+  text += `nomi: ${item.title} %0A`
+  text += `nomi: ${item.quantity} %0A`
+  text += `nomi: ${item.price.brm()} so'm %0A%0A`
+  // text += `rasm: ${item.url}%0A`
+
+})
+text += `Jami: <b>${data.reduce((a, b)=> a + b.price * b.quantity, 0)?.brm()}</b> so'm`
+
+
+let url = `https://api.telegram.org/bot${BOT__TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${text}&parse_mode=html`
+let api = new XMLHttpRequest();
+api.open("GET", url, true);
+api.send();
+toast.success("Buyurtmangiz qabul qilindi 24 soat ichida aloqaga chiqamiz", {position: "top-center"})
+dispatch(removeAllCart())
+setName("")
+setAddress("")
+setPhoneNumber("")
+setMessage("")
   }
   return (
     <div className='cart__wrapper'>

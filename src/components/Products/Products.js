@@ -13,7 +13,7 @@ function Products({title, data}) {
  const wishes = useSelector((s)=> s.wishes.value)
 const handleAddCart = (el)=>{
   dispatch(incCart(el))
-  toast.success("Savatga qo'shildi")
+  toast.success("Savatga qo'shildi", {position: "top-center"})
 }
   return (
     <div className='container'>

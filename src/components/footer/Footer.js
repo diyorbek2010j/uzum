@@ -24,7 +24,7 @@ function Footer() {
       <div className="footer__img footer__card">
         <h3>Ilovani yuklab olish</h3>
       <img src={app} alt="" />
-      <h3>Uzum ijtimoiy tarmoqlarda</h3>
+      <h3>Uzum tarmoqlarda</h3>
       <div className="footer__icon">
         <FaFacebook/>
         <FaGoogle/>
