@@ -1,0 +1,47 @@
+.create-product{
+    width: 100%;
+min-height: 95vh;
+}
+.create-product__input{
+    width: 300px;
+    height: 400px;
+    border: 1px solid #888;
+    border-radius: 8px;
+margin-left: 20px;
+margin-top: 30px;
+
+}
+.input-title{
+  width: 260px;
+  height: 30px;
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 5px;
+  border: 1px solid #888;
+}
+.create-product__input select{
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 150px;
+    height: 25px;
+    border-radius: 5px;
+}
+.input-file{
+    width: 200px;
+    height: 30px;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+.input-btn{
+    width: 250px;
+    height: 40px;
+display: block;
+margin: auto;
+margin-top: 20px;
+border: none;
+border-radius: 10px;
+background: var(--bg-py);
+color: #fff;
+font-size: 15px;
+}

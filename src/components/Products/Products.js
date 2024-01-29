@@ -24,7 +24,7 @@ const handleAddCart = (el)=>{
 {
     data?.map((el)=> <div key={el.id} className="products__card">
         <div className="products__image">
-<Link to={`/products/ ${el.id}`}>
+<Link to={`/products/${el.id}`}>
         <img src={el.url[0]} alt="" />
 
 </Link>

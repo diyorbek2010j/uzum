@@ -1,0 +1,95 @@
+.single__route{
+height: 600px;
+display: flex;
+}
+.single__img{
+    width: 50%;
+}
+.single__img img{
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 8px;
+}
+.single__title{
+    width: 70%
+}
+.single__name{
+    padding-left: 100px;
+    margin-top: 50px;
+}
+.single__title p{
+    padding-left: 100px;
+    margin-top: 20px;
+    width: 60%;
+}
+.single__price{
+    padding-left: 100px;
+    margin-top: 20px;
+}
+.single__monthly{
+    padding: 2px;
+    font-size: 15px;
+    border-radius: 5px;
+    color: #555;
+    margin-left: 100px;
+}
+.single__button{
+    width: 100%;
+    height: 200px;
+    margin-top: 30px;
+    display: flex;
+}
+.single__btn{
+    width: 250px;
+height: 50px;
+margin-top: 70px;
+margin-left: 100px;
+border-radius: 8px;
+border: none;
+color: 
+#fff;
+background: rgb(235, 46, 235);
+font-size: 15px;
+}
+.single__admin{
+    margin-left: 60px;
+    color: rgb(235, 46, 235);
+    background: none;
+    border: 2px solid  rgb(235, 46, 235);
+}
+@media screen and (max-width:1000px) {
+    .single__img{
+        width: 320px;
+    }
+}
+@media screen and (max-width:880px) {
+    .single__img{
+        width: 290px;
+    }
+    .single__route{
+        grid-gap: 20px;
+        margin-bottom: 4%;
+    }
+    .single__info{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:600px) {
+    .single__img{
+        width: 60%;
+    }
+    .single__route{
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-bottom: 4%;
+    }
+    .single__info{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:400px) {
+    .single__info{
+        font-size: 18px;
+    }
+}

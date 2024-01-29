@@ -5,6 +5,7 @@ import { deCart,incCart,removeAllCart,removeCart } from '../../context/cartSlice
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { toast } from 'react-toastify'
+import { NavLink } from 'react-router-dom'
 
 const BOT__TOKEN = "6649486877:AAFIxu1CvrXexdOzygG50rEzaw__rJlTplQ"
 const USER_ID =    6516090274
@@ -57,7 +58,10 @@ setMessage("")
         {
           data?.map(el => <div key={el.title} className='cart__item'>
             <Link to={`/product/${el.id}`} className='cart__item-left'>
+<NavLink to={"/singleroute"}>
+
               <img src={el.url} alt={el.title} />
+</NavLink>
               <div>
                 <h4>{el.title}</h4>
                 <p>Kategoriya: {el.category}</p>

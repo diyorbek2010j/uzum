@@ -27,7 +27,7 @@ function App() {
 <Route path='/wishis' element={<Wishis/>}/>
 < Route path='/cart' element={<Cart/>}/>
 <Route path='/' element={<Auth/>}>
-< Route path='/admin' element={<Admin/>}/>
+< Route path='/admin/*' element={<Admin/>}/>
 </Route>
 < Route path='/products/:id' element={<Singlerote/>}/>
 < Route path='/*' element={<Notfound/>}/>
