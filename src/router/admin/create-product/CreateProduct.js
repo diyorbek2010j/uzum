@@ -7,7 +7,7 @@ function CreateProduct() {
       <h2 >Mahsulot yarating</h2>
       <div className='create-product__input' >
         <input className='input-title' type="text" placeholder='Mahsulot nomi' />
-        <input className='input-title' type="password" placeholder='Mahsulot narxi' />
+        <input className='input-title' type="naumber" placeholder='Mahsulot narxi' />
         <select name="" id="">
           <option value="">texnnika</option>
           <option value="">oziq-ovqat</option>

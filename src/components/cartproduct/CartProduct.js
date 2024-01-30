@@ -33,8 +33,8 @@ function CartProducts({data}) {
 
 data.forEach((item)=>{
   text += `nomi: ${item.title} %0A`
-  text += `nomi: ${item.quantity} %0A`
-  text += `nomi: ${item.price.brm()} so'm %0A%0A`
+  text += `soni : ${item.quantity} %0A`
+  text += `narxi: ${item.price.brm()} so'm %0A%0A`
   // text += `rasm: ${item.url}%0A`
 
 })
